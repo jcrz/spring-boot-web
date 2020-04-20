@@ -1,7 +1,9 @@
-# Apuntes de Spring boot web
+# APUNTES SPRING BOOT WEB
+
+## Controlador
 
 En el enfoque de Spring para construir sitios web, las solicitudes HTTP son manejadas por un 
-controlador. @Controller
+controlador. @Controller es la anotación que identifica a un controlador.
 
 ```java
 package com.example.servingwebcontent;
@@ -12,13 +14,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class GreetingController {
+@GetMapping("/app")
+public class IndexController {
 
-	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+	@GetMapping({"/index", "/", "/home"})
+	public String index(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
 		return "greeting";
 	}
 
 }
 ``
+En el ejemplo anterior, la clase IndexController maneja las solicitudes GET a partir de una direccion raiz "/app" especificada en la 
+anotación @GetMapping. 
