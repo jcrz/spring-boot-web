@@ -26,4 +26,4 @@ public class IndexController {
 }
 ```
 En el ejemplo anterior, la clase IndexController maneja las solicitudes GET a partir de una direccion raiz "/app" especificada en la 
-anotación @GetMapping. 
+anotación **@GetMapping**. 
