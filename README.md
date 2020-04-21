@@ -48,5 +48,5 @@ EL método index evalúa un parametro ("texto") desde la URL de tipo String. El 
 </html>
 ```
 
-Link > [index.html](https://github.com/jcrz/spring-boot-web/blob/master/src/main/resources/templates/index.html)
+Link :point_right: [index.html](https://github.com/jcrz/spring-boot-web/blob/master/src/main/resources/templates/index.html)
 
